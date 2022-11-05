@@ -1,46 +1,105 @@
-import { Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import * as React from "react";
+import Box from "@mui/material/Box";
+import IconButton from "@mui/material/IconButton";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import { Avatar } from "@mui/material";
+import Logo from "../../assets/imgs/logo.png";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
+import Aboutme from "../AboutMe";
+import { useStyles } from "./styles";
 
-
-function Home() {
+function Home(props) {
+  const classes = useStyles();
   return (
-    <Box sx={{ flexGrow: 1, width: "100%", border: "1px solid red"  }}>
-      <Box sx={{ flexGrow: 1, width: "50%", border: "1px solid blue" }}>
-        <Typography
+    <>
+      <Box sx={{ display: "flex"}}>
+        <Box
+          component="main"
           sx={{
-            mt: 15,
-            ml: 5,
-            color: "#878A8E",
-            fontSize: "20px",
-            fontWeight: "light",
-            letterSpacing: "4px"
+            p: 3,
+            margin: "auto",
+            width: "100%",
+            textAlign: "center",
+            verticalAlign: "50%",
           }}
         >
-          Lucas Maciel
-        </Typography>
-        <Typography
-          sx={{ ml: 5, fontSize: "70px", fontWeight: 800, lineHeight: "85px" }}
-        >
-          Web Developer 
-          <Typography sx={{ fontSize: "70px", fontWeight: 800, lineHeight: "50px" }}>
-            Student
-          </Typography>
-          <Typography sx={{ color: "#878A8E", fontSize: "20px", fontWeight: 500, mt:5 }}>
-          Over the past years, I studied and I’ve worked as an IT Technician and at this moment I study in Viana do Castelo for Web Developer.
-          </Typography>
-          <Typography variant="h6" component="div" sx={{mt:5, color:"black", fontSize:"18px", fontWeight:'bold', cursor: "pointer"}}>
-            View Projects
-            <Typography variant="h6" component="div" sx={{color:"#878A8E", fontSize:"15px", fontWeight:'light',}}>
-            or
+          <Toolbar />
+          <Box sx={{ width: "100%", textAlign: "center" }}>
+            <Typography className={classes.title}>
+              Hello <span className={classes.titleGray}>, I'm</span>
             </Typography>
-            <Typography variant="h6" component="div" sx={{color:"black", fontSize:"18px", fontWeight:'bold', cursor: "pointer",}}>
-            Read about Me
+          </Box>
+          <Box sx={{}}>
+            <Avatar
+              src={Logo}
+              alt="My Logo"
+              sx={{
+                all: "initial",
+                display: "inline-block",
+                height: "auto",
+                widht: "auto",
+              }}
+            />
+          </Box>
+          <Box sx={{ mt: 2 }}>
+            <IconButton
+              aria-label="LinkedIn"
+              href="https://www.linkedin.com/in/-lucasmaciel/"
+              target="_blank"
+              sx={{ color: "#007AF7" }}
+            >
+              <LinkedInIcon className={classes.iconStyle} />
+            </IconButton>
+            <IconButton
+              aria-label="Instagram"
+              href="https://www.instagram.com/17lucasz/"
+              target="_blank"
+              sx={{ color: "#007AF7" }}
+            >
+              <InstagramIcon className={classes.iconStyle} />
+            </IconButton>
+            <IconButton
+              aria-label="Twitter"
+              href="https://twitter.com/17lucasz"
+              target="_blank"
+              sx={{ color: "#007AF7", ml: "5" }}
+            >
+              <TwitterIcon className={classes.iconStyle} />
+            </IconButton>
+            <IconButton
+              aria-label="GitHub"
+              href="https://github.com/lucasmaciel03"
+              target="_blank"
+              sx={{ color: "#007AF7", ml: "5" }}
+            >
+              <GitHubIcon className={classes.iconStyle} />
+            </IconButton>
+          </Box>
+          <Box sx={{ mt: 5, textAlign:'center'}}>
+            <Typography
+            className={classes.scrollTxt}
+        
+            >
+              Scroll for more
             </Typography>
-            </Typography>
-        </Typography>
+            <IconButton
+              aria-label="See More"
+              className={classes.scrollIcon}
+            >
+              <KeyboardDoubleArrowDownIcon
+                sx={{ width: "45px", height: "45px" }}
+              />
+            </IconButton>
+          </Box>
+        </Box>
       </Box>
-    </Box>
-    
+      <Aboutme />
+    </>
   );
 }
 
