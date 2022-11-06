@@ -17,7 +17,7 @@ function Home(props) {
   const classes = useStyles();
   return (
     <>
-      <Box sx={{ display: "flex"}}>
+      <Box className={classes.firstbox }>
         <Box
           component="main"
           sx={{
@@ -80,21 +80,16 @@ function Home(props) {
               <GitHubIcon className={classes.iconStyle} />
             </IconButton>
           </Box>
-          <Box sx={{ mt: 5, textAlign:'center'}}>
+          <Box sx={{ mt: 10, textAlign:'center'}}>
             <Typography
             className={classes.scrollTxt}
         
             >
               Scroll for more
             </Typography>
-            <IconButton
-              aria-label="See More"
-              className={classes.scrollIcon}
-            >
               <KeyboardDoubleArrowDownIcon
-                sx={{ width: "45px", height: "45px" }}
+                className={classes.scrollIcon}
               />
-            </IconButton>
           </Box>
         </Box>
       </Box>

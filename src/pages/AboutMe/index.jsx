@@ -6,13 +6,15 @@ import { Avatar, Button } from "@mui/material";
 import MyPhoto from "../../assets/imgs/myPhoto.jpg";
 import { useStyles } from "./styles";
 import Style from "./style.css";
+import Projects from "../Projects";
+
 function Aboutme() {
   const classes = useStyles();
   return (
     <>
-      <Box sx={{ height: "100vh" }}>
+      <Box sx={{ height: "100vh"}}>
         <Box component="main" className={classes.tilteBox1}>
-          <Toolbar />
+          <Toolbar classesName={classes.toolbar}/>
           <Box className={classes.titleBox}>
             <Typography className={classes.title}>
               a bit about <span className={classes.titleBlue}>me.</span>
@@ -47,19 +49,9 @@ function Aboutme() {
               , level 19
             </Typography>
           </Box>
-          <Box sx={{ textAlign: "center" }}>
+          <Box classsName={classes.textinfoBox}>
             <Typography
-              sx={{
-                margin: "20px 20px",
-                fontFamily: "Poppins",
-                fontStyle: "bold",
-                fontWeight: "700",
-                textAlign: "justify",
-                display: "inline-block",
-                color: "#808080",
-                fontSize: "20px",
-                userSelect: "none",
-              }}
+              className={classes.textInfo}
             >
               Web Dev student based in Póvoa de Varzim, Porto. I love to think
               outside the box and find creative solutions for all my projects.
@@ -71,13 +63,7 @@ function Aboutme() {
               become even better.
             </Typography>
           </Box>
-          <Box
-            sx={{
-              mr: 3,
-              ml: 3,
-              textAlign: "justify",
-            }}
-          >
+          <Box className={classes.infosBox}>
             <Typography className={classes.infos}>
               SCHOOL{" "}
               <span className={classes.infosGrey}>
@@ -85,14 +71,7 @@ function Aboutme() {
               </span>
             </Typography>
           </Box>
-          <Box
-            sx={{
-              mt: 1,
-              mr: 3,
-              ml: 3,
-              textAlign: "justify",
-            }}
-          >
+          <Box className={classes.infosBox}>
             <Typography className={classes.infos}>
               INTERNSHIP - 2021{" "}
               <span className={classes.infosGrey}> : TRIUM, IT</span>
@@ -121,32 +100,52 @@ function Aboutme() {
           </Box>
           <Box className={classes.hobbies}>
             <Typography className={classes.title}>
-              what i <span className={classes.titleBlue}>like</span>
+              what i <span className={classes.titleBlue}>like.</span>
             </Typography>
           </Box>
           <div class="slider">
-            <div class="slide-track2">
-              <div class="slide">GYM</div>
-              <div class="slide">NETFLIX</div>
-              <div class="slide">FASHION</div>
-              <div class="slide">CODE</div>
-              <div class="slide">FOOTBALL</div>
-
-              <div class="slide">GYM</div>
-              <div class="slide">NETFLIX</div>
-              <div class="slide">FASHION</div>
-              <div class="slide">CODE</div>
-              <div class="slide">FOOTBALL</div>
-
-              <div class="slide">GYM</div>
-              <div class="slide">NETFLIX</div>
-              <div class="slide">FASHION</div>
-              <div class="slide">CODE</div>
-              <div class="slide">FOOTBALL</div>
+            <div class="slide-track">
+              <div class="slide">
+                <h1 className="textHobbies">FOOTBALL</h1>
+              </div>
+              <div class="slide">
+                <h1 className="textHobbies">MUSIC</h1>
+              </div>
+              <div class="slide">
+                <h1 className="textHobbies">NETLIFX</h1>
+              </div>
+              <div class="slide">
+                <h1 className="textHobbies">GYM</h1>
+              </div>
+              <div class="slide">
+                <h1 className="textHobbies">FASHION</h1>
+              </div>
+              <div class="slide">
+                <h1 className="textHobbies">CODE</h1>
+              </div>
+              <div class="slide">
+                <h1 className="textHobbies">FOOTBALL</h1>
+              </div>
+              <div class="slide">
+                <h1 className="textHobbies">MUSIC</h1>
+              </div>
+              <div class="slide">
+                <h1 className="textHobbies">NETLIFX</h1>
+              </div>
+              <div class="slide">
+                <h1 className="textHobbies">GYM</h1>
+              </div>
+              <div class="slide">
+                <h1 className="textHobbies">FASHION</h1>
+              </div>
+              <div class="slide">
+                <h1 className="textHobbies">CODE</h1>
+              </div> 
             </div>
           </div>
         </Box>
       </Box>
+      <Projects />
     </>
   );
 }

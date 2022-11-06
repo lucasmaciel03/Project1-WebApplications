@@ -1,6 +1,9 @@
 import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles((theme) => ({
+  firstbox:{
+    display: "flex"
+  },
   title: {
     fontFamily: "Poppins",
     fontStyle: "italic",
@@ -14,9 +17,7 @@ export const useStyles = makeStyles((theme) => ({
     color: '#808080'
   },
   scrollIcon:{
-    all: "initial",
-    color: "#808080",
-    ":hover": { bgcolor: "transparent" },
+    width: "45px", height: "45px", cursor:'pointer', bgcolor:'transparent', color:'#808080'
   },
   scrollTxt: {
     fontFamily: "Poppins", color: "#808080", fontSize: "12px",
@@ -38,6 +39,9 @@ export const useStyles = makeStyles((theme) => ({
     },
     scrollTxt: {
       display:"none",
+    },
+    firstbox: {
+      marginTop: '50px',
     },
   },
   [theme.breakpoints.down("md")]: {

@@ -14,25 +14,32 @@ export const useStyles = makeStyles((theme) => ({
         color: "#007AF7",
     },
     titleBox: {
-      width: "100%", textAlign: "left",
+     textAlign: "left", marginLeft: "40px",
     },
     nameBox: {
-      width: "100%", textAlign: "left", marginTop:"15px"
+     textAlign: "left", marginTop:"15px",  marginLeft: "40px",
     },
     titleBox1: {
       margin: "0",
-          width: "100%",
           height: "100vh",
           textAlign: "center",
           ml:3
     },
-    btnStyle: {
-      backgroundColor:'#007AF7',
-      borderRadius:2,
-      width:'80px',
-      height:'40px',
-      margin:'0px 2px',
-      fontSize:'12px'
+    textInfo:{
+      // margin: "20px 20px",
+      fontFamily: "Poppins",
+      fontStyle: "bold",
+      fontWeight: "700",
+      marginLeft: "40px",
+      textAlign: "justify",
+      display: "inline-block",
+      color: "#808080",
+      fontSize: "20px",
+      userSelect: "none",
+    },
+    infosBox: {
+      marginTop: "30px",
+      marginLeft: "40px",
     },
     infos: {
         fontFamily: "Poppins",
@@ -43,33 +50,20 @@ export const useStyles = makeStyles((theme) => ({
         userSelect: "none",
     },
     infosGrey: {
-      fontFamily: "Poppins",
-        fontStyle: "italic",
-        fontWeight: "700",
-        display: "inline",
-        fontSize: "20px",
         color: "#808080",
-        userSelect: "none",
-        cursor:"pointer"
     },
     hobbies: {
-      width: "100%", textAlign: "center", marginTop:'50px'
+     marginTop:'50px', marginLeft:'40px',
     },
-    slider:{
-      display: 'grid',
-      placeItems: 'center',
-      position: 'relative',
-      overflow: 'hidden',
-      width: '90%',
-      height: '250px',
-      margin: 'auto',
+    texthobbies:{
+      fontFamily: 'Poppins',
+      fontWeight: 700,
+      fontStyle: 'italic',
+      marginTop: '25px',
+      color: '#007AF7',
     },
-    slidetrack: {
-      display: 'flex',
-      width: 'calc(2*6*250px)',
-      animation: 'scrollAnimation 6s linear infinite',
-      hover:{animationPlayState: 'paused'},
-    },
+
+    
     [theme.breakpoints.down("lg")]: {
         title: {
           fontSize: "100px",
@@ -77,15 +71,42 @@ export const useStyles = makeStyles((theme) => ({
         },
         titleBox: {
           textAlign: "center",
-          ml:0,
+          marginLeft: "0px",
+          margingTop: "0px"
         },
         titleBox1: {
           textAlign: "center",
           ml:0,
         },
         nameBox:{
-          textAlign: "center"
-        }
+          textAlign: "center",
+          marginLeft: "0px",
+          marginTop: "0px",
+        },
+        textinfoBox:{
+          marginTop: "0px",
+          textAlign: 'justify',
+          hyphens: 'auto',
+          wordSpacing: '-0.05em',
+
+        },
+        infosBox:{
+          marginTop:"0px",
+          marginLeft: "0px",
+          textAlign: "center",
+        },
+        textInfo:{
+          margin: "20px 20px",
+        },
+        infos:{
+          margin: "20px 20px",
+        },
+        toolbar:{
+          display: "none",
+        },
+        hobbies:{
+          textAlign:'center',
+        },
       },
       [theme.breakpoints.down("md")]: {
         title: {
