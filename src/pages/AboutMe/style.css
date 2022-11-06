@@ -17,8 +17,7 @@
 	}
   }
   .slider {
-	background-color: rgb(241, 244, 244);
-	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+	background-color: transparent;
 	height: 300px;
 	margin: auto;
 	overflow: hidden;
@@ -58,6 +57,7 @@
 	font-style: italic;
 	margin-top: 25px;
 	color: #007AF7;
+	user-select: none;
   }
 
   .slide:hover{
@@ -65,6 +65,9 @@
   }
 
   @media screen and (max-width: 1200px) {
+	.slider{
+		height:100px;
+	}
 	.slider .slide{
 	
 	font-size: 25px;

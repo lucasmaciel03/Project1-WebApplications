@@ -14,11 +14,16 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Avatar } from "@mui/material";
-import { useLocation, matchPath } from "react-router-dom";
 import { useStyles } from "./styles";
 
+
 const drawerWidth = 240;
-const navItems = ["About", "Projects", "Resume", "Contact"];
+const navItems = [
+  {name: "About", href: "#about"},
+  {name: "Projects", href: "#"},
+  {name: "Contact", href: "mailto: 03lucasmaciel@gmail.com"},
+  {name: "Resume", href: "https://drive.google.com/file/d/1T2GFmAWOJiVRiwjXVO0LqBIGkWKmXiQw/view?usp=sharing"},
+];
 
 function Navbar(props) {
   const classes = useStyles();
@@ -46,6 +51,8 @@ function Navbar(props) {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton
+              href={item.href}
+              key={item.name}
               sx={{
                 textAlign: "left",
                 fontFamily: "Avenir",
@@ -57,7 +64,7 @@ function Navbar(props) {
                 },
               }}
             >
-              <ListItemText primary={item} />
+              <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -121,7 +128,8 @@ function Navbar(props) {
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Button
-                key={item}
+                href={item.href}
+                key={item.name}
                 sx={{
                   color: "#808080",
                   ml: 1,
@@ -134,7 +142,7 @@ function Navbar(props) {
                   },
                 }}
               >
-                {item}
+                {item.name}
               </Button>
             ))}
           </Box>

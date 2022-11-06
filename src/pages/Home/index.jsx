@@ -87,9 +87,13 @@ function Home(props) {
             >
               Scroll for more
             </Typography>
+            <IconButton
+              href="#about"
+            >
               <KeyboardDoubleArrowDownIcon
                 className={classes.scrollIcon}
               />
+              </IconButton>
           </Box>
         </Box>
       </Box>

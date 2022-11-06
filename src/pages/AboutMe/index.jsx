@@ -12,14 +12,17 @@ function Aboutme() {
   const classes = useStyles();
   return (
     <>
-      <Box sx={{ height: "100vh"}}>
+      <Box sx={{ height: "auto"}}>
+      <section id="about">
         <Box component="main" className={classes.tilteBox1}>
-          <Toolbar classesName={classes.toolbar}/>
+
+          <Toolbar/>
           <Box className={classes.titleBox}>
             <Typography className={classes.title}>
               a bit about <span className={classes.titleBlue}>me.</span>
             </Typography>
           </Box>
+     
           <Box className={classes.nameBox}>
             <Typography
               sx={{
@@ -56,7 +59,7 @@ function Aboutme() {
               Web Dev student based in Póvoa de Varzim, Porto. I love to think
               outside the box and find creative solutions for all my projects.
               <div>
-                I also really like learn about other programs languages,
+                I also really like learn about other program languages,
                 especially back-end.
               </div>
               I wish to learn more about development Mobile and Web so I can
@@ -112,7 +115,7 @@ function Aboutme() {
                 <h1 className="textHobbies">MUSIC</h1>
               </div>
               <div class="slide">
-                <h1 className="textHobbies">NETLIFX</h1>
+                <h1 className="textHobbies">NETFLIX</h1>
               </div>
               <div class="slide">
                 <h1 className="textHobbies">GYM</h1>
@@ -130,7 +133,7 @@ function Aboutme() {
                 <h1 className="textHobbies">MUSIC</h1>
               </div>
               <div class="slide">
-                <h1 className="textHobbies">NETLIFX</h1>
+                <h1 className="textHobbies">NETFLIX</h1>
               </div>
               <div class="slide">
                 <h1 className="textHobbies">GYM</h1>
@@ -143,8 +146,11 @@ function Aboutme() {
               </div> 
             </div>
           </div>
+          
         </Box>
+        </section>
       </Box>
+
       <Projects />
     </>
   );

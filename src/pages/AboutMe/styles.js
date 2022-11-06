@@ -101,9 +101,6 @@ export const useStyles = makeStyles((theme) => ({
         infos:{
           margin: "20px 20px",
         },
-        toolbar:{
-          display: "none",
-        },
         hobbies:{
           textAlign:'center',
         },

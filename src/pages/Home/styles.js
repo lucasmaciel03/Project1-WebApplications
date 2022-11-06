@@ -2,7 +2,8 @@ import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles((theme) => ({
   firstbox:{
-    display: "flex"
+    display: "flex",
+    height: 'auto',
   },
   title: {
     fontFamily: "Poppins",
@@ -17,7 +18,7 @@ export const useStyles = makeStyles((theme) => ({
     color: '#808080'
   },
   scrollIcon:{
-    width: "45px", height: "45px", cursor:'pointer', bgcolor:'transparent', color:'#808080'
+    width: "45px", height: "45px", cursor:'pointer', bgcolor:'transparent', color:'#808080', 
   },
   scrollTxt: {
     fontFamily: "Poppins", color: "#808080", fontSize: "12px",
