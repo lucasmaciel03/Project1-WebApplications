@@ -1,6 +1,9 @@
 import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles((theme) => ({
+    tilteBox1:{
+        marginTop:'0px',
+    },
     title: {
         fontFamily: "Poppins",
         fontStyle: "italic",
@@ -9,15 +12,16 @@ export const useStyles = makeStyles((theme) => ({
         fontSize: "80px",
         color: "#808080",
         userSelect: "none",
+        
     },
     titleBlue: {
         color: "#007AF7",
     },
     titleBox: {
-     textAlign: "left", marginLeft: "40px",
+     textAlign: "left", marginLeft: "40px", 
     },
     githubbox:{
-        display:'flex',
+        display: 'flex',
         marginTop: '10px',
         marginLeft:'40px',
         alignItems: 'center',
@@ -40,7 +44,7 @@ export const useStyles = makeStyles((theme) => ({
         width: '36px', height: '36px', marginLeft: '10px'
     },
     cardprojects:{
-        maxWidth: 345, marginLeft: "40px", mt: 5, mb: 5,  display:'inline-block'
+        maxWidth: 345, marginLeft: "40px", marginTop: '20px', mb: 5,  display:'inline-block'
     },
     [theme.breakpoints.down("lg")]: {
         title:{
@@ -69,8 +73,10 @@ export const useStyles = makeStyles((theme) => ({
             width:'30px'    
         },
         cardprojects:{
-            margin:'20px 27px',
-            marginTop:'0px',
+            display:'block',
+            margin: 'auto',
+            width: '50%',
+            marginTop:'20px',
         }
       },
       [theme.breakpoints.down("md")]: {

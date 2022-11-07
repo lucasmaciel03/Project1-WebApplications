@@ -11,14 +11,12 @@ import {
   CardMedia,
   IconButton,
 } from "@mui/material";
-import MyPhoto from "../../assets/imgs/myPhoto.jpg";
 import { useStyles } from "./styles";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import axios from "axios";
-import AddIcon from "@mui/icons-material/Add";
 import Weatherbg from "../../assets/imgs/weatherbg.gif";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import VisibilityIcon from "@mui/icons-material/Visibility";
+import Tictactoe from "../../assets/imgs/tictactoe.png";
 
 function Projects() {
   const classes = useStyles();
@@ -39,9 +37,9 @@ function Projects() {
     getReps();
   }, []);
   return (
-    <Box sx={{ height: "auto" }}>
+    <Box sx={{ height: "100vh"}}>
       <Box component="main" className={classes.tilteBox1}>
-        <Toolbar />
+        <section id="projects">
         <Box className={classes.titleBox}>
           <Typography className={classes.title}>
             some of my best <span className={classes.titleBlue}>work.</span>
@@ -65,10 +63,10 @@ function Projects() {
             <span className={classes.githubblue}>{reps.followers}</span>
           </Typography>
         </Box>
-
+        <Box sx={{ mt:'5'}}>
         <Card className={classes.cardprojects}>
           <CardMedia component="img" height="194" image={Weatherbg} />
-          <CardContent sx={{ bgcolor: "#fff" }}>
+          <CardContent sx={{ bgcolor: "#fff"}}>
             <Typography
               variant="body2"
               sx={{ color: "", fontFamily: "Poppins", userSelect:'none'  }}
@@ -79,8 +77,8 @@ function Projects() {
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
-            <IconButton sx={{ ml: "145px" }}>
-              <VisibilityIcon sx={{ ":hover": { color: "#007AF7" } }} />
+            <IconButton href="https://lucasmaciel03.github.io/TicTacToe/" className={classes.cardprojects}>
+              <VisibilityIcon  sx={{ ":hover": { color: "#007AF7" } }} />
             </IconButton>
           </CardActions>
         </Card>
@@ -88,7 +86,7 @@ function Projects() {
           <CardMedia
             component="img"
             height="194"
-            image="https://cdn.dribbble.com/users/317853/screenshots/7171494/media/898b3a307c9ffbbba7b8db0b53c8605c.png"
+            image='https://cdn.dribbble.com/users/63973/screenshots/2063711/media/09f28efa07c49ca080ed861f80677518.png'
           />
           <CardContent sx={{ bgcolor: "#fff" }}>
             <Typography
@@ -100,11 +98,34 @@ function Projects() {
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
-            <IconButton href="https://lucasmaciel03.github.io/TicTacToe/" sx={{ ml: "145px" }}>
+            <IconButton href="https://lucasmaciel03.github.io/TicTacToe/" className={classes.cardprojects}>
               <VisibilityIcon  sx={{ ":hover": { color: "#007AF7" } }} />
             </IconButton>
           </CardActions>
         </Card>
+        <Card className={classes.cardprojects}>
+          <CardMedia
+            component="img"
+            height="194"
+            image='https://cdn.dribbble.com/users/150828/screenshots/2873686/todo_app_icon.jpg'
+          />
+          <CardContent sx={{ bgcolor: "#fff" }}>
+            <Typography
+              variant="body2"
+              sx={{ color: "", fontFamily: "Poppins", userSelect:'none' }}
+            >
+              This project was made in the scope to improve my personal skills
+              <div sx={{ mt: "2px" }}>This is a To Do App Web</div>
+            </Typography>
+          </CardContent>
+          <CardActions disableSpacing>
+            <IconButton href="https://lucasmaciel03.github.io/TicTacToe/" className={classes.cardprojects}>
+              <VisibilityIcon  sx={{ ":hover": { color: "#007AF7" } }} />
+            </IconButton>
+          </CardActions>
+        </Card>
+        </Box>
+        </section>
       </Box>
     </Box>
   );

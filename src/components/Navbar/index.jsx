@@ -20,7 +20,7 @@ import { useStyles } from "./styles";
 const drawerWidth = 240;
 const navItems = [
   {name: "About", href: "#about"},
-  {name: "Projects", href: "#"},
+  {name: "Projects", href: "#projects"},
   {name: "Contact", href: "mailto: 03lucasmaciel@gmail.com"},
   {name: "Resume", href: "https://drive.google.com/file/d/1T2GFmAWOJiVRiwjXVO0LqBIGkWKmXiQw/view?usp=sharing"},
 ];

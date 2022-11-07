@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 export const useStyles = makeStyles((theme) => ({
   firstbox:{
     display: "flex",
-    height: 'auto',
+    height: '100vh',
   },
   title: {
     fontFamily: "Poppins",
@@ -43,6 +43,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     firstbox: {
       marginTop: '50px',
+      height: 'auto'
     },
   },
   [theme.breakpoints.down("md")]: {

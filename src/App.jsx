@@ -5,6 +5,7 @@ import Aboutme from "./pages/AboutMe";
 import Projects from "./pages/Projects";
 import Home from "./pages/Home"
 import Weatherapp from "./pages/Projects/Weather/"
+import Todoapp from "./pages/Projects/To-do-app/"
 
 function App() {
     return(
@@ -15,6 +16,7 @@ function App() {
                 <Route path="/" element={<Aboutme />}></Route> 
                 <Route path="/" element={<Projects />}></Route> 
                 <Route path="/weatherapp" element={<Weatherapp />}></Route> 
+                <Route path="/todoapp" element={<Todoapp />}></Route> 
             </Routes>
             {/* <Footer/> */}
         </div>
