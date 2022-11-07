@@ -48,7 +48,7 @@ function Aboutme() {
                   padding: "0 0.5rem",
                 }}
               >
-                , level 19
+                , age 19
               </Typography>
             </Box>
             <Box classsName={classes.textinfoBox}>
@@ -86,13 +86,9 @@ function Aboutme() {
               <Avatar
                 src={MyPhoto}
                 alt="My Logo"
+                className={classes.myphoto}
                 sx={{
-                  all: "initial",
-                  display: "inline-block",
-                  padding: "40px",
-                  height: "100%",
-                  minHeight: "500px",
-                  widht: "300px",
+                  
                 }}
               />
             </Box>

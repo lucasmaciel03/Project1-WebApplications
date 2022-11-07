@@ -66,6 +66,14 @@ export const useStyles = makeStyles((theme) => ({
     marginTop: "25px",
     color: "#007AF7",
   },
+  myphoto:{
+    all: "initial",
+    display: "inline-block",
+    padding: "40px",
+    height: "300px",
+    minHeight: "500px",
+    widht: "300px",
+  },
 
   [theme.breakpoints.down("lg")]: {
     title: {
@@ -105,6 +113,14 @@ export const useStyles = makeStyles((theme) => ({
     },
     hobbies: {
       textAlign: "center",
+    },
+    myphoto:{
+      all: "initial",
+      display: "inline-block",
+      padding: "40px",
+      height: "100%",
+      minHeight: "500px",
+      widht: "300px",
     },
   },
   [theme.breakpoints.down("md")]: {
