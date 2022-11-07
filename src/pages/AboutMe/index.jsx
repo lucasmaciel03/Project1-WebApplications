@@ -92,7 +92,8 @@ function Aboutme() {
               sx={{
                 all: "initial",
                 display: "inline-block",
-                height: "300px",
+                height: "100%",
+                minHeight:"500px",
                 widht: "300px",
                 ":hover": {
                   border: "12px solid #007AF7",
