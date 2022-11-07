@@ -17,7 +17,9 @@ function Home(props) {
   const classes = useStyles();
   return (
     <>
+          <section id="home">
       <Box className={classes.firstbox }>
+
         <Box
           component="main"
           sx={{
@@ -96,7 +98,9 @@ function Home(props) {
               </IconButton>
           </Box>
         </Box>
+    
       </Box>
+      </section>
       <Aboutme />
     </>
   );

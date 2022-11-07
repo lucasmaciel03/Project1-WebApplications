@@ -117,34 +117,7 @@ function Projects() {
                 </Button>
               </CardActions>
             </Card>
-            <Card className={classes.cardprojects}>
-              <CardMedia
-                component="img"
-                height="194"
-                image="https://cdn.dribbble.com/users/150828/screenshots/2873686/todo_app_icon.jpg"
-              />
-              <CardContent sx={{ bgcolor: "#fff" }}>
-                <Typography
-                  variant="body2"
-                  sx={{ color: "", fontFamily: "Poppins", userSelect: "none" }}
-                >
-                  This project was made in the scope to improve my personal
-                  skills
-                  <div sx={{ mt: "2px" }}>This is a To Do App Web</div>
-                </Typography>
-              </CardContent>
-              <CardActions disableSpacing sx={{}}>
-                <Button
-                  sx={{
-                    margin: "auto",
-                    width: "50%",
-                    border: "1px solid #007AF7",
-                  }}
-                >
-                  Know More
-                </Button>
-              </CardActions>
-            </Card>
+           
           </Box>
         </section>
       </Box>

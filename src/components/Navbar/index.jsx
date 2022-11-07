@@ -89,12 +89,11 @@ function Navbar(props) {
             <MenuIcon />
           </IconButton>
           <Avatar
+           href="#home"
             alt="Lucas Maciel"
             src="https://img.icons8.com/external-others-inmotus-design/67/000000/external-M-virtual-keyboard-others-inmotus-design-5.png"
-            sx={{ cursor: "pointer", ml: 3, height: "45px", width: "45px" }}
-            onClick={() => {
-              window.location.reload();
-            }}
+            sx={{ cursor: "pointer", ml: 3, height: "45px", width: "45px"}}
+           
           />
           <Typography
             variant="h6"

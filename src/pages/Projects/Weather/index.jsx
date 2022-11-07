@@ -1,22 +1,16 @@
-import {
-  Button,
-  Divider,
-  IconButton,
-  InputBase,
-  Paper,
-  TextField,
-  Toolbar,
-} from "@mui/material";
-import { Box, positions, width } from "@mui/system";
-import React from "react";
-import style from "./style.css";
-import PhotoCamera from "@mui/icons-material/PhotoCamera";
-import MenuIcon from "@mui/icons-material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
-import DirectionsIcon from "@mui/icons-material/Directions";
-import NearMeIcon from "@mui/icons-material/NearMe";
-import Warm from "../../../assets/imgs/weatherApp/warm.jpg";
-import { useStyles } from "./styles";
+import { Grid, TextField, Toolbar, Typography } from "@mui/material";
+import { Box } from "@mui/system";
+import React, { useState } from "react";
+import thunderstorm from '../../../assets/imgs/weatherApp/images/Thunderstorm.png';
+import drizzle from '../../../assets/imgs/weatherApp/images/Drizzle.png';
+import rain from '../../../assets/imgs/weatherApp/images/Rain.png';
+import snow from '../../../assets/imgs/weatherApp/images/Snow.png';
+import atmosphere from '../../../assets/imgs/weatherApp/images/Atmosphere.png';
+import clear from '../../../assets/imgs/weatherApp/images/Clear.png';
+import clouds from '../../../assets/imgs/weatherApp/images/Cloudy.png';
+import extreme from '../../../assets/imgs/weatherApp/images/Extreme.png';
+import defaultIcon from '../../../assets/imgs/weatherApp/images/Partly-cloudy.png';
+
 
 const api = {
   key: "0cd94553bd9cfdf688887ff4b10e097f",
@@ -24,46 +18,75 @@ const api = {
 };
 
 function Weather() {
-  const classes = useStyles();
+  const [query, setQuery] = useState("");
+  const [weather, setWeather] = useState({});
+
+  const search = (evt) => {
+    if (evt.key === "Enter") {
+      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+        .then((res) => res.json())
+        .then((result) => {
+          setWeather(result);
+          setQuery("");
+          console.log(result);
+        });
+    }
+  };
+
+  
+  const weatherIcon = {
+    thunderstorm,
+    drizzle,
+    rain,
+    snow,
+    atmosphere,
+    clear,
+    clouds,
+    extreme,
+    defaultIcon,
+  }
+
   return (
-    <Box>
+    
+    <div
+      className={
+        typeof weather.main != "undefined"
+          ? weather.main.temp > 16
+            ? "app warm"
+            : "app"
+          : "app"
+      }
+    >
       <Toolbar />
       <Box sx={{ textAlign: "center" }}>
-        <Paper
-          component="form"
-          sx={{
-            display: "flex",
-            margin: "auto",
-            maxWidth: "50%",
-            width: "500px",
-          }}
-        >
-          <InputBase
-            sx={{ ml: 3, flex: 1, color: "#808080" }}
-            placeholder="Search Google Maps"
-            inputProps={{ "aria-label": "search google maps" }}
-          />
-          <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
-          <IconButton
-            sx={{ p: "10px", color: "#007AF7" }}
-            aria-label="directions"
-          >
-            <NearMeIcon />
-          </IconButton>
-        </Paper>
+        <TextField
+          sx={{ color: "#007AF7", width: "300px" }}
+          onChange={(e) => setQuery(e.target.value)}
+          value={query}
+          onKeyPress={search}
+          id="outlined-basic"
+          label="Search..."
+          variant="outlined"
+        />
       </Box>
-      <Box
-        className="sizeBox"
-        sx={{
-          margin: "auto",
-          border: "1px solid red",
-          mt: 2,
-          borderRadius: "5px",
-          boxShadow: 2,
-          backgroundSize: "contain",
-        }}
-      ></Box>
-    </Box>
+      {(typeof weather.main != "undefined") ? (
+      <Grid sx={{border:'1px solid #B9BCBC', borderRadius:'20px',maxWidth:'50%', width:'500px', margin:'auto', mt:5, boxShadow:1, textAlign:'center'}}>
+        <Typography sx={{fontSize:'20px', fontFamily:'Poppins'}}>
+        {weather.name}
+        </Typography>
+        <Typography sx={{fontSize:'20px', fontFamily:'Poppins'}}>
+        {weather.sys.country}
+        </Typography>
+        <Typography sx={{fontSize:'20px', fontFamily:'Poppins'}}>
+        {Math.round(weather.main.temp)} ºC
+        </Typography>
+        <Typography sx={{fontSize:'20px', fontFamily:'Poppins'}}>
+        {weather.description}
+        </Typography>
+        <img src={`${weatherIcon.defaultIcon}`} alt="WeatherIcon" height="64" width="64" />
+      </Grid>
+      ) : ('')}
+    </div>
   );
 }
 
