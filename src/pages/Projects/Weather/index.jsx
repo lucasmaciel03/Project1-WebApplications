@@ -58,7 +58,9 @@ function Weather() {
       }
     >
       <Toolbar />
-      <Box sx={{ textAlign: "center" }}>
+      <Box sx={{ textAlign: "center", mt:5}}>
+        <Typography sx={{fontFamily:'Poppins', fontStyle:'italic', fontSize:'20px', fontWeight: 700, color:'#007AF7'}}> Welcome Weather App </Typography>
+        <Typography sx={{fontFamily:'Poppins', fontSize:'20px', fontWeight: 700, color:'#808080', mb:3}}> Write any city and press Enter</Typography>
         <TextField
           sx={{ color: "#007AF7", width: "300px" }}
           onChange={(e) => setQuery(e.target.value)}

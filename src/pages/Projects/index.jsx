@@ -18,6 +18,7 @@ import axios from "axios";
 import Weatherbg from "../../assets/imgs/weatherbg.gif";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import Tictactoe from "../../assets/imgs/tictactoe.png";
+import { Link } from 'react-router-dom';
 
 function Projects() {
   const classes = useStyles();
@@ -78,6 +79,7 @@ function Projects() {
                 </Typography>
               </CardContent>
               <CardActions disableSpacing>
+                
                 <Button
                   sx={{
                     margin: "auto",
@@ -85,7 +87,9 @@ function Projects() {
                     border: "1px solid #007AF7",
                   }}
                 >
+                  <Link to="/weatherapp" sx={{all:'inital'}}>
                   Know More
+                  </Link>
                 </Button>
               </CardActions>
             </Card>
@@ -112,6 +116,7 @@ function Projects() {
                     width: "50%",
                     border: "1px solid #007AF7",
                   }}
+                  href="https://lucasmaciel03.github.io/technical-tictactoe/"
                 >
                   Know More
                 </Button>

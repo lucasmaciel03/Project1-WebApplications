@@ -15,6 +15,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Avatar } from "@mui/material";
 import { useStyles } from "./styles";
+import { Link } from 'react-router-dom';
 
 
 const drawerWidth = 240;
@@ -64,7 +65,8 @@ function Navbar(props) {
                 },
               }}
             >
-              <ListItemText primary={item.name} />
+                  <ListItemText primary={item.name} />
+              
             </ListItemButton>
           </ListItem>
         ))}
@@ -88,13 +90,16 @@ function Navbar(props) {
           >
             <MenuIcon />
           </IconButton>
+          <Link to="/">
           <Avatar
-           href="#home"
+            href="#home"
             alt="Lucas Maciel"
             src="https://img.icons8.com/external-others-inmotus-design/67/000000/external-M-virtual-keyboard-others-inmotus-design-5.png"
             sx={{ cursor: "pointer", ml: 3, height: "45px", width: "45px"}}
            
           />
+          </Link>
+          
           <Typography
             variant="h6"
             component="div"
@@ -141,7 +146,7 @@ function Navbar(props) {
                   },
                 }}
               >
-                {item.name}
+                 {item.name}
               </Button>
             ))}
           </Box>
